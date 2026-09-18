@@ -109,7 +109,7 @@ if (($action === 'confirm' || $action === 'cancel') && isset($_GET['token'])) {
         $query = $db->prepare('UPDATE appointments SET status = ?, google_event_id = ? WHERE id = ? AND status = "pending"');
         $query->execute([$status, $eventId, $appointment['id']]);
     } else {
-        $query = $db->prepare('UPDATE appointments SET status = ? WHERE id = ? AND status = "pending"');
+        $query = $db->prepare('UPDATE appointments SET status = ? WHERE id = ? AND status IN ("pending", "confirmed")');
         $query->execute([$status, $appointment['id']]);
         $calendar->updateAppointment($appointment['google_event_id'], $status);
     }

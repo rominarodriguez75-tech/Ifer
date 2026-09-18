@@ -1,14 +1,4 @@
-<?php
-$doctors = [
-    'young' => 'Dr. Edgardo Young',
-    'viglierchio' => 'Dra. M. Inés Viglierchio',
-    'sicaro' => 'Dra. Laura Sícaro',
-    'vilela' => 'Dr. Martin Vilela',
-    'pablo' => 'Dra. Florencia Pablo',
-    'lorenzo' => 'Dr. Fabián Lorenzo',
-    'auge' => 'Dr. Luís M. Augé'
-];
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,12 +31,12 @@ $doctors = [
             <p>Elegí profesional, día y horario. Recibirás la confirmación y los recordatorios en tu celular.</p>
             <form id="appointmentForm">
               <div class="appointment-step">
-                <h4>1. Profesional</h4>
+                <h4>1. Especialidad y profesional</h4>
+                <select class="form-control mb-10" name="specialty" id="specialty" required>
+                  <option value="">Seleccioná una especialidad</option>
+                </select>
                 <select class="form-control" name="doctor" id="doctor" required>
-                  <option value="">Seleccioná un profesional</option>
-                  <?php foreach ($doctors as $id => $doctor): ?>
-                    <option value="<?= htmlspecialchars($id, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($doctor, ENT_QUOTES, 'UTF-8') ?></option>
-                  <?php endforeach; ?>
+                  <option value="">Seleccioná primero una especialidad</option>
                 </select>
               </div>
               <div class="appointment-step">
@@ -72,11 +62,38 @@ $doctors = [
   </main>
   <script>
     const form = document.getElementById('appointmentForm');
+    const specialty = document.getElementById('specialty');
     const doctor = document.getElementById('doctor');
     const date = document.getElementById('date');
     const slots = document.getElementById('slots');
     const time = document.getElementById('time');
     const message = document.getElementById('appointmentMessage');
+
+    let doctors = [];
+
+    async function loadCatalog() {
+      const response = await fetch('assets/php/appointments.php?action=catalog');
+      const result = await response.json();
+      if (!result.ok) return;
+      result.specialties.forEach((item) => {
+        const option = document.createElement('option');
+        option.value = item.id;
+        option.textContent = item.name;
+        specialty.appendChild(option);
+      });
+      doctors = result.doctors;
+    }
+
+    function loadDoctors() {
+      doctor.innerHTML = '<option value="">Seleccioná un profesional</option>';
+      doctors.filter((item) => item.specialty_ids.includes(Number(specialty.value))).forEach((item) => {
+        const option = document.createElement('option');
+        option.value = item.id;
+        option.textContent = item.name;
+        doctor.appendChild(option);
+      });
+      loadSlots();
+    }
 
     async function loadSlots() {
       time.value = '';
@@ -105,8 +122,10 @@ $doctors = [
       });
     }
 
+    specialty.addEventListener('change', loadDoctors);
     doctor.addEventListener('change', loadSlots);
     date.addEventListener('change', loadSlots);
+    loadCatalog();
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (!time.value) {

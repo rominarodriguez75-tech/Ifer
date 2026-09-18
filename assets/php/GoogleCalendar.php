@@ -32,7 +32,6 @@ class GoogleCalendar
             'description' => "Paciente: {$appointment['patient_name']}\nTeléfono: {$appointment['patient_phone']}\nEstado: {$appointment['status']}",
             'start' => ['dateTime' => $start->format(DateTime::RFC3339), 'timeZone' => $this->timezone->getName()],
             'end' => ['dateTime' => $end->format(DateTime::RFC3339), 'timeZone' => $this->timezone->getName()],
-            'attendees' => [['email' => $appointment['patient_email']]],
             'reminders' => ['useDefault' => false, 'overrides' => [['method' => 'popup', 'minutes' => 1440]]]
         ];
         $result = $this->request('POST', '/calendars/' . rawurlencode($this->calendarId) . '/events', $event);

@@ -2,8 +2,10 @@
 header('Content-Type: application/json; charset=utf-8');
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 require_once __DIR__ . '/GoogleCalendar.php';
+require_once __DIR__ . '/WhatsAppNotifier.php';
 $config = require dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'turnos.php';
 $calendar = new GoogleCalendar($config);
+$whatsapp = new WhatsAppNotifier($config);
 
 $dataDir = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'data';
 if (!is_dir($dataDir)) mkdir($dataDir, 0750, true);
@@ -90,7 +92,16 @@ if ($action === 'book' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         if ((int) $error->errorInfo[1] === 19) response(false, 'Ese horario acaba de ser reservado. Elegí otro.');
         response(false, 'No se pudo guardar el turno.');
     }
-    response(true, 'Recibimos tu solicitud. Te enviaremos la confirmación al celular.', ['token' => $token, 'calendar_synced' => false]);
+    $appointment = [
+        'appointment_date' => $date,
+        'appointment_time' => $time,
+        'patient_name' => $name,
+        'patient_email' => $email,
+        'patient_phone' => $phone,
+        'token' => $token
+    ];
+    $whatsapp->sendAppointmentRequest($appointment, $doctorName);
+    response(true, 'Recibimos tu solicitud. Te enviaremos la confirmación al celular.', ['token' => $token, 'calendar_synced' => false, 'whatsapp_configured' => $whatsapp->isConfigured()]);
 }
 
 if (($action === 'confirm' || $action === 'cancel') && isset($_GET['token'])) {
@@ -108,10 +119,12 @@ if (($action === 'confirm' || $action === 'cancel') && isset($_GET['token'])) {
         if (!$eventId) response(false, 'No se pudo sincronizar el turno con Google Calendar. Intentá nuevamente.');
         $query = $db->prepare('UPDATE appointments SET status = ?, google_event_id = ? WHERE id = ? AND status = "pending"');
         $query->execute([$status, $eventId, $appointment['id']]);
+        $whatsapp->sendConfirmed($appointment, $doctorName ?: $appointment['doctor']);
     } else {
         $query = $db->prepare('UPDATE appointments SET status = ? WHERE id = ? AND status IN ("pending", "confirmed")');
         $query->execute([$status, $appointment['id']]);
         $calendar->updateAppointment($appointment['google_event_id'], $status);
+        $whatsapp->sendCancelled($appointment);
     }
     response(true, $status === 'confirmed' ? 'Turno confirmado.' : 'Turno cancelado.');
 }

@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>IFER - Instituto de Ginecología y reproducción</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between pt-20">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                <!-- <li>
+                    <button class="miniPopup-emergency-trigger" type="button">24/7 Emergency</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                      <a href="#" class="phone__number">
+                        <i class="icon-phone"></i> <span>11 5777-2500</span>
+                      </a>
+                      <p>No dudes en ponerse en contacto con nuestro personal de recepción para cualquier consulta.
+                      </p>
+                      <a href="contact-us.html" class="btn btn__secondary btn__link btn__block">
+                        <span>Turnos</span> <i class="icon-arrow-right"></i>
+                      </a>
+                    </div>
+                  </li>-->
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+57772500">Línea telefónica: (+54) 11 5777-2500</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Marcelo T. de Alvear 2259, CABA, Argentina</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Lu-Vi 8:00-19:00</a>
+                  </li>
+                </ul><!-- /.contact__list -->
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                  <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="index.html">
+			<img src="assets/images/logo/logoSVGdark.svg" width="180" class="logo-dark"/>				
+			<img src="assets/images/logo/logoSVGlight.svg" width="180" class="logo-light" />				
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <?php include 'menuP.php'; ?>
+
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button><br>
+	         </div><!-- /.navbar-collapse -->
+		    <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="https://ifer.com.ar/turnos/" class="btn btn__primary btn__rounded ml-30">
+              <i class="icon-calendar"></i>
+              <span>Turnos</span>
+            </a>
+          </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    <section class="slider">
+      <div class="slick-carousel m-slides-0"
+        data-slick='{"slidesToShow": 1, "arrows": true, "dots": false, "speed": 700,"fade": true,"cssEase": "linear"}'>
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/2.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">40 años acompañando<br>la vida.</h2>
+                  <p class="slide__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias.</p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                     <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/reproduccionAsist.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Reproducción<br> Asistida</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/puncionFolicular.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Preservación<br> Fertilidad </h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/doctor.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Otros<br> tratamientos</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/1.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Vitrificación de óvulos.</h2>
+                  <p class="slide__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias.</p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                     <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/reproduccionAsist.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Reproducción<br> Asistida</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+             		  	<img src="assets/images/logo/puncinFolicular.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Preservación<br> Fertilidad </h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/doctor.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Otros<br> tratamientos</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+           
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+	 <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/3.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Estudios genéticos.</h2>
+                  <p class="slide__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias.</p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                     <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/reproduccionAsist.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Reproducción<br> Asistida</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+             		  	<img src="assets/images/logo/puncinFolicular.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Preservación<br> Fertilidad </h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li class="feature-item">
+                      <div class="feature__icon">
+              		 	<img src="assets/images/logo/doctor.svg"/>				
+                      </div>
+                      <h2 class="feature__title">Otros<br> tratamientos</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+           
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    <!-- ============================
+        contact info
+    ============================== -->
+    <section class="contact-info py-0">
+      <div class="container">
+        <div class="row row-no-gutter boxes-wrapper">
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+               	<img src="assets/images/logo/fertilizacion.svg"/>				
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Tratamientos</h2>
+                <p class="contact__desc">
+				  <ul class="text-white">
+					<li>Reproducción Asistida</li>
+				  	<li>Inseminación artificial</li>
+				  	<li>FIV</li>
+					 <li>Ovodonación</li>
+					 <li>Preservación</li>
+					 <li>Otras Técnicas:</li>
+				  </ul></p>
+                <a href="tratamientos.html" class="btn btn__white btn__outlined btn__rounded">
+                  <span>+ Info</span><i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+               	<img src="assets/images/logo/turnos.svg"/>				
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Turnos On LINE</h2>
+                <p class="contact__desc">Desde nuestro sitio podes elgir tu turno de manera On line.</p>
+                <a href="https://ifer.com.ar/turnos/" class="btn btn__white btn__outlined btn__rounded">
+                  <span>Elegir Turno</span><i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+               	<img src="assets/images/logo/reloj.svg"/>				
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Nuestros Horarios</h2>
+                <ul class="time__list list-unstyled mb-0">
+                  <li><span>Lu a Vi</span><span>8.00 - 7:00 pm</span></li>
+                  <li><span>Sábado</span><span>9.00 - 10:00 pm</span></li>
+                  <li><span>Domingo</span><span>10.00 - 12:00 pm</span></li>
+                </ul>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.contact-info -->
+
+    <!-- ========================
+      About Layout 2
+    =========================== -->
+    <section class="about-layout2 pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-1">
+            <div class="heading-layout2">
+              <h3 class="heading__title mb-60">40 Años acompañando la vida</h3>
+            </div><!-- /heading -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="text-with-icon">
+              <div class="text__icon">
+               	<img src="assets/images/logo/40.svg"/>				
+              </div>
+              <div class="text__content">
+                <p class="heading__desc font-weight-bold color-secondary mb-30">Detrás de cada historia hay un equipo que combina ciencia, vocación y empatía. Celebramos cuatro décadas de compromiso, investigación y sueños cumplidos.
+
+                </p>
+                <a href="doctors-timetable.html" class="btn btn__secondary btn__rounded mb-70">
+                  <span>Doctor</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="video-banner-layout2 bg-overlay">
+              <img src="assets/images/about/2.jpg" alt="about" class="w-100">
+              <a class="video__btn video__btn-white popup-video" href="assets/images/IFER V2.mp4" target="_blank">
+                <div class="video__player">
+                  <i class="fa fa-play"></i>
+                </div>
+                <span class="video__btn-title color-white">Ver Video</span>
+              </a>
+            </div><!-- /.video-banner -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <div class="about__text bg-white">
+              <p class="heading__desc mb-30">Cuatro décadas acompañando a quienes soñaron con ser padres. 
+              </p>
+              <p class="heading__desc mb-30">Con visión ética y dedicación, abrimos caminos para que miles de familias hoy sean una realidad. </p>
+              <ul class="list-items list-unstyled">
+                <li>Celebramos los años con la misma pasión, el mismo compromiso y la misma certeza: cada historia importa. </li>
+                <li>En medicina reproductiva, las decisiones son sensibles.  </li>
+                <li><strong>uestro compromiso es acompañar con claridad, con evidencia, pero sobre todo con empatía.</strong>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 2 -->
+
+    <!-- ========================
+        Services Layout 1
+    =========================== -->
+    <section class="services-layout1 services-carousel mt-100">
+      <div class="bg-img"><img src="assets/images/backgrounds/2.jpg" alt="background"></div>
+      <div class="container" id="tratamientos">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-60">
+              <h2 class="heading__subtitle"></h2>
+              <h3 class="heading__title">Tratamientos</h3>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              <!-- service item #1 -->
+              <div class="service-item">
+                <div class="service__icon">
+                  	<img src="assets/images/logo/reproduccionAsist.svg" class="anchoMax"/>				
+                </div><!-- /.service__icon -->
+                <div class="service__content">
+                  <h4 class="service__title">Estimulación Ovárica</h4>
+                  <p class="service__desc">Consiste en administrar medicación por vía oral o inyectable para estimular la ovulación. De esta manera se logra mejorar la calidad de los óvulos y se pueden programar las relaciones sexuales a los fines de que el ovulo y el espermatozoide logren la fecundación en el aparato reproductor femenino.
+                  </p>
+                  <!--<ul class="list-items list-items-layout1 list-unstyled">
+                    <li>Neurocritical Care</li>
+                    <li>Neuro Oncology</li>
+                    <li>Geriatric Neurology</li>
+                  </ul>-->
+                  <a href="tratamientos.html" class="btn btn__secondary  btn__outlined btn__rounded">
+                    <span>Leer más</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.service__content -->
+              </div><!-- /.service-item -->
+              <!-- service item #2 -->
+              <div class="service-item">
+                <div class="service__icon">
+                  	<img src="assets/images/logo/embrion.svg" class="anchoMax"/>				
+				  </div><!-- /.service__icon -->
+                <div class="service__content">
+                  <h4 class="service__title">ICSI</h4>
+                  <p class="service__desc">Cuando el embarazo no llega, la ciencia ofrece alternativas seguras y eficaces. La ICSI es una técnica de reproducción asistida que logra tasas de fecundación del 70–80% y está indicada en casos de factor masculino severo. Literalmente significa “fertilización en un vidrio”. 
+                  </p>
+                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Leer más</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.service__content -->
+              </div><!-- /.service-item -->
+              <!-- service item #3 -->
+              <div class="service-item">
+                <div class="service__icon">
+                  	<img src="assets/images/logo/ovulo.svg" class="anchoMax"/>				
+                </div><!-- /.service__icon -->
+                <div class="service__content">
+                  <h4 class="service__title">Ovodonación</h4>
+                  <p class="service__desc">La ovodonación es utilizada a partir del conocimiento de la menor chance de embarazo a término que existe en las mujeres de mayor edad. Algunas de las situaciones que pueden ser tratadas con óvulos donados son: la reserva ovárica disminuida, la insuficiencia ovárica secundaria a quimioterapia para el cáncer o a motivos genéticos, las fallas reiteradas de FIV y la edad avanzada en la mujer.
+                  </p>
+                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Leer más</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.service__content -->
+              </div><!-- /.service-item -->
+              <!-- service item #4 -->
+
+            </div>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Services Layout 1 -->
+	  
+	  
+	<!-- ======================
+      Team
+    ========================= -->
+    <section class="team-layout2 pb-80">
+      <div class="container" id="Testimonios">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-40">
+              <h2 class="heading__title">Testimonios</h2>
+              <p class="heading__desc">
+              </p>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              <!-- Member #1 -->
+              <div class="member">
+                <div class="member__img">
+                  <img src="assets/images/team/1.jpg" alt="member img">
+                </div><!-- /.member-img -->
+                <div class="member__info">
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Delfina</a></h5>
+                  <p class="member__job">Lorem Ipsum.</p>
+                  <p class="member__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+                  <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                    <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                      <span>Leer más</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                    <!--<ul class="social-icons list-unstyled mb-0">
+                      <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                    </ul>--><!-- /.social-icons -->
+                  </div>
+                </div><!-- /.member-info -->
+              </div><!-- /.member -->
+              <!-- Member #2 -->
+              <div class="member">
+                <div class="member__img">
+                  <img src="assets/images/team/2.jpg" alt="member img">
+                </div><!-- /.member-img -->
+                <div class="member__info">
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Ana & Paula</a></h5>
+                  <p class="member__job">Lorem Ipsum.</p>
+                  <p class="member__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+                  <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                    <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                      <span>Leer más</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                    <!--<ul class="social-icons list-unstyled mb-0">
+                      <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                    </ul>--><!-- /.social-icons -->
+                  </div>
+                </div><!-- /.member-info -->
+              </div><!-- /.member -->
+              <!-- Member #3 -->
+              <div class="member">
+                <div class="member__img">
+                  <img src="assets/images/team/3.jpg" alt="member img">
+                </div><!-- /.member-img -->
+                <div class="member__info">
+                  <h5 class="member__name"><a href="doctors-single-doctor1.html">Nico & Juli</a></h5>
+                  <p class="member__job">Lorem Ipsum.</p>
+                  <p class="member__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+                  <div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+                    <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+                      <span>Leer más</span>
+                      <i class="icon-arrow-right"></i>
+                    </a>
+                    <!--<ul class="social-icons list-unstyled mb-0">
+                      <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+                    </ul>--><!-- /.social-icons -->
+                  </div>
+                </div><!-- /.member-info -->
+              </div><!-- /.member -->
+            </div><!-- /.carousel -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Team -->
+
+
+  
+
+    <!-- ======================
+    Features Layout 2
+    ========================= -->
+    <section class="features-layout2 pt-130 bg-overlay bg-overlay-primary">
+      <div class="bg-img"><img src="assets/images/backgrounds/2.jpg" alt="background"></div>
+      <div class="container" id="actividades">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 offset-lg-1">
+            <div class="heading__layout2 mb-50">
+              <h1 class="heading__title color-white text-center">Nuestras ACTIVIDADES</h1>
+            </div>
+          </div><!-- /col-lg-5 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <!-- Feature item #1 -->
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature__img">
+                <img src="assets/images/services/1.jpg" alt="service" loading="lazy">
+              </div><!-- /.feature__img -->
+              <div class="feature__content">
+                <div class="feature__icon">
+                  <i class="icon-heart"></i>
+                </div>
+                <h4 class="feature__title">Programas de Formación</h4>
+              </div><!-- /.feature__content -->
+              <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
+              </a>
+            </div><!-- /.feature-item -->
+          </div><!-- /.col-lg-3 -->
+          <!-- Feature item #2 -->
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature__img">
+                <img src="assets/images/services/2.jpg" alt="service" loading="lazy">
+              </div><!-- /.feature__img -->
+              <div class="feature__content">
+                <div class="feature__icon">
+                  <i class="icon-doctor"></i>
+                </div>
+                <h4 class="feature__title">Experiencia Académica</h4>
+              </div><!-- /.feature__content -->
+              <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
+              </a>
+            </div><!-- /.feature-item -->
+          </div><!-- /.col-lg-3 -->
+          <!-- Feature item #3 -->
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature__img">
+                <img src="assets/images/services/3.jpg" alt="service" loading="lazy">
+              </div><!-- /.feature__img -->
+              <div class="feature__content">
+                <div class="feature__icon">
+                  <i class="icon-bacteria"></i>
+                </div>
+                <h4 class="feature__title">Espacios de Actualización</h4>
+              </div><!-- /.feature__content -->
+              <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
+              </a>
+            </div><!-- /.feature-item -->
+          </div><!-- /.col-lg-3 -->
+          <!-- Feature item #4 -->
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature__img">
+                <img src="assets/images/services/4.jpg" alt="service" loading="lazy">
+              </div><!-- /.feature__img -->
+              <div class="feature__content">
+                <div class="feature__icon">
+                  <i class="icon-chisel"></i>
+                </div>
+                <h4 class="feature__title">Pregrado: Unidad académica de Ginecología</h4>
+              </div><!-- /.feature__content -->
+              <a href="#" class="btn__link">
+                <i class="icon-arrow-right icon-outlined"></i>
+              </a>
+            </div><!-- /.feature-item -->
+          </div><!-- /.col-lg-3 -->
+
+        </div><!-- /.row -->
+        </div><!-- /.row -->
+    </section><!-- /.Features Layout 2 -->
+
+
+    <!-- ======================
+     Work Process 
+    ========================= -->
+    <section class="work-process work-process-carousel pt-130 pb-0 bg-overlay bg-overlay-secondary">
+      <div class="bg-img"><img src="assets/images/banners/1.jpg" alt="background"></div>
+      <div class="container" id="familias">
+        <div class="row heading-layout2">
+          <div class="col-12">
+<!--            <h2 class="heading__subtitle color-primary">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</h2>
+-->          </div><!-- /.col-12 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="heading__title color-white text-center">FAMILIAS Diversas!
+            </h2>
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-xl-1">
+          <!--  <p class="heading__desc font-weight-bold color-gray mb-40">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
+            </p>-->
+       		<!--<ul class="list-items list-items-layout2 list-items-light list-horizontal list-unstyled">
+              <li>Fractures and dislocations</li>
+              <li>Health Assessments</li>
+              <li>Desensitisation injections</li>
+              <li>High Quality Care</li>
+              <li>Desensitisation injections</li>
+            </ul>-->
+          </div><!-- /.col-xl-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="carousel-container mt-90">
+              <div class="slick-carousel"
+                data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "infinite":false, "arrows": false, "dots": false, "responsive": [{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+                <!-- process item #1 -->
+                <div class="process-item">
+                  <span class="process__number">01</span>
+                   <div class="post__img pb-50">
+						<a href="blog-single-post.html">
+						  <img src="assets/images/blog/grid/1.jpg" alt="post image" loading="lazy">
+						</a>
+              		</div>
+                  <h4 class="process__title">Lorem Ipsum es simplemente</h4>
+                  <p class="process__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Lorem Ipsum </span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.process-item -->
+                <!-- process-item #2 -->
+                <div class="process-item">
+                  <span class="process__number">02</span>
+              		<div class="post__img pb-50">
+						<a href="blog-single-post.html">
+						  <img src="assets/images/blog/grid/2.jpg" alt="post image" loading="lazy">
+						</a>
+              		</div>
+                  <h4 class="process__title">Lorem Ipsum es simplemente</h4>
+                  <p class="process__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Lorem Ipsum </span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.process-item -->
+                <!-- process-item #3 -->
+                <div class="process-item">
+                  <span class="process__number">03</span>
+   					<div class="post__img pb-50">
+						<a href="blog-single-post.html">
+						  <img src="assets/images/blog/grid/3.jpg" alt="post image" loading="lazy">
+						</a>
+              		</div>
+                  <h4 class="process__title">Lorem Ipsum </h4>
+                  <p class="process__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Lorem Ipsum </span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.process-item -->
+                <!-- process-item #4 -->
+                <div class="process-item">
+                  <span class="process__number">04</span>
+   					<div class="post__img pb-50">
+						<a href="blog-single-post.html">
+						  <img src="assets/images/blog/grid/4.jpg" alt="post image" loading="lazy">
+						</a>
+              		</div>
+                  <h4 class="process__title">Lorem Ipsum </h4>
+                  <p class="process__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Lorem Ipsum </span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.process-item -->
+                <!-- process-item #5 -->
+
+              </div><!-- /.carousel -->
+            </div>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+      <div class="cta bg-light-blue">
+        <div class="container" id="programas">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <img src="assets/images/icons/alert2.png" class="cta__img" alt="">
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-12 col-md-7 col-lg-7">
+              <h4 class="cta__title">Nuestros Programas</h4>
+              <p class="cta__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
+              </p>
+            </div><!-- /.col-lg-7 -->
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <a href="appointment.html" class="btn btn__primary btn__secondary-style2 btn__rounded">
+                <span>Consulta</span>
+                <i class="icon-arrow-right"></i>
+              </a>
+            </div><!-- /.col-lg-3 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.cta -->
+    </section><!-- /.Work Process -->
+
+
+    <!-- ========================
+       gallery
+      =========================== -->
+    <section class="gallery pt-100 pb-90" >
+      <div class="container" id="obrassociales">
+        <div class="row">
+          <div class="col-12">
+			 <div class="heading text-center mb-40">
+              	<h3 class="heading__title">OBRAS SOCIALES</h3>
+              	<p class="heading__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+              	</p>
+            </div>
+			  
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "autoplay": true, "arrows": true, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              <a class="popup-gallery-item" href="assets/images/gallery/1.jpg">
+                <img src="assets/images/gallery/1.jpg" alt="gallery img">
+              </a>
+              <a class="popup-gallery-item" href="assets/images/gallery/2.jpg">
+                <img src="assets/images/gallery/2.jpg" alt="gallery img">
+              </a>
+              <a class="popup-gallery-item" href="assets/images/gallery/3.jpg">
+                <img src="assets/images/gallery/3.jpg" alt="gallery img">
+              </a>
+              <a class="popup-gallery-item" href="assets/images/gallery/4.jpg">
+                <img src="assets/images/gallery/4.jpg" alt="gallery img">
+              </a>
+              <a class="popup-gallery-item" href="assets/images/gallery/5.jpg">
+                <img src="assets/images/gallery/5.jpg" alt="gallery img">
+              </a>
+              <a class="popup-gallery-item" href="assets/images/gallery/6.jpg">
+                <img src="assets/images/gallery/6.jpg" alt="gallery img">
+              </a>
+            </div><!-- /.gallery-images-wrapper -->
+          </div><!-- /.col-xl-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.gallery 2 -->
+
+    <!-- ==========================
+        contact layout 3
+    =========================== -->
+    <section class="contact-layout3 bg-overlay bg-overlay-primary-gradient pb-60">
+      <div class="bg-img"><img src="assets/images/banners/3.jpg" alt="banner"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <div class="contact-panel mb-50">
+              <form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h4 class="contact-panel__title">Solicite su TURNO</h4>
+                    <p class="contact-panel__desc mb-30"></p>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-12">
+                    <div class="form-group">
+                      <i class="icon-widget form-group-icon"></i>
+                      <select class="form-control">
+                        <option value="0">Fertilización Asistida</option>
+                        <option value="1">Preservación fertilidad</option>
+                        <option value="2">Otras Tratamientos</option>
+                      </select>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <i class="icon-news form-group-icon"></i>
+                      <input type="text" class="form-control" placeholder="Nombre" id="contact-name" name="contact-name"
+                        required>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <i class="icon-email form-group-icon"></i>
+                      <input type="email" class="form-control" placeholder="Email" id="contact-email"
+                        name="contact-email" required>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                      <i class="icon-phone form-group-icon"></i>
+                      <input type="text" class="form-control" placeholder="Teléfono" id="contact-Phone"
+                        name="contact-phone" required>
+                    </div>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group form-group-date">
+                      <i class="icon-calendar form-group-icon"></i>
+                      <input type="date" class="form-control" id="contact-date" name="Fecha" required>
+                    </div>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group form-group-date">
+                      <i class="icon-clock form-group-icon"></i>
+                      <input type="time" class="form-control" id="contact-time" name="Hora" required>
+                    </div>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-12">
+                    <button type="submit" class="btn btn__secondary btn__rounded btn__block btn__xhight mt-10">
+                      <span>Agendar Turno</span> <i class="icon-arrow-right"></i>
+                    </button>
+                    <div class="contact-result"></div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </form>
+            </div>
+          </div><!-- /.col-lg-7 -->
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="heading heading-light mb-30">
+              <h3 class="heading__title mb-30">Ayudamos a nuestros pacientes!!</h3>
+              <p class="heading__desc">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+              </p>
+            </div>
+            <div class="text__block">
+              <p class="text__block-desc color-white font-weight-bold">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. </p>
+              <div class="sinature color-white">
+                <span class="font-weight-bold">Martin Qube</span><span>, Medcity Manager</span>
+              </div>
+            </div><!-- /.text__block -->
+			<!-- <div class="slick-carousel clients-light mt-20"
+              data-slick='{"slidesToShow": 3, "arrows": false, "dots": false, "autoplay": true,"autoplaySpeed": 2000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 3}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}]}'>
+              <div class="client">
+                <img src="assets/images/clients/1.png" alt="client">
+                <img src="assets/images/clients/1.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/2.png" alt="client">
+                <img src="assets/images/clients/2.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/3.png" alt="client">
+                <img src="assets/images/clients/3.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/4.png" alt="client">
+                <img src="assets/images/clients/4.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/5.png" alt="client">
+                <img src="assets/images/clients/5.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/6.png" alt="client">
+                <img src="assets/images/clients/6.png" alt="client">
+              </div>
+              <div class="client">
+                <img src="assets/images/clients/7.png" alt="client">
+                <img src="assets/images/clients/7.png" alt="client">
+              </div>
+            </div>--><!-- /.carousel -->
+          </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.contact layout 3 -->
+
+	<!----><div class="container">
+	<div class="flotante"><!--boton whastapp-->		
+	<a class="" title="Click para chatear" href="https://api.whatsapp.com/send?phone=5491157772500" target="_blank" rel="noopener"><img src="assets/images/logo/wt.png" border="0" alt=""/></a>
+	</div><!--FIN Whastapp-->
+	</div><!---->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <div class="footer-widget-about">
+                <img src="assets/images/logo/logoSVGlight.svg" width="200" alt="logo"  class="mb-30">
+                <p class="color-gray">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos.
+                </p>
+                <a href="contact-us.html" class="btn btn__primary btn__primary-style2 btn__link">
+                  <span>Agendá tu Turno</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Departamentos</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="tratamientos.html">Reproducción Asistida</a></li>
+                    <li><a href="tratamientos.html">Preservación fertilidad</a></li>
+                    <li><a href="tratamientos.html">Otros Tratamientos</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="about-us.html">Sobre Nosotros</a></li>
+                    <li><a href="tratamientos.html">Tratamientos</a></li>
+                    <li><a href="docencia.html">Docencia</a></li>
+                    <li><a href="doctors-grid.html">Equipo Profesional</a></li>
+                    <li><a href="https://ifer.com.ar/turnos/">Turnos</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget__title color-heading">Contacto Rápido</h6>
+                <ul class="contact-list list-unstyled">
+                  <li>
+                    <a href="#" class="phone__number">
+                      <i class="icon-phone"></i> <span>(+54) 11 5777-2500</span>
+                    </a>
+                  </li>
+                  <li class="color-body">Marcelo T. de Alvear 2259, CABA, Argentina</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <a href="contact-us.html" class="btn btn__primary btn__link mr-30">
+                    <i class="icon-arrow-right"></i> <span>Ubicación</span>
+                  </a>
+                  <ul class="social-icons list-unstyled mb-0">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                </div>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <span class="fz-14">&copy; 2020 DataSoft, All Rights Reserved. With Love by</span>
+<!--              <a class="fz-14 color-primary" href="http://themeforest.net/user/7oroof">7oroof.com</a>
+-->            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <nav>
+                <ul class="list-unstyled footer__copyright-links d-flex flex-wrap justify-content-end mb-0">
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Cookies</a></li>
+                </ul>
+              </nav>
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

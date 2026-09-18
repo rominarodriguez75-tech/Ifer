@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>IFER - Instituto de Ginecología y reproducción</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between pt-20">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                <!-- <li>
+                    <button class="miniPopup-emergency-trigger" type="button">24/7 Emergency</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                      <a href="#" class="phone__number">
+                        <i class="icon-phone"></i> <span>11 5777-2500</span>
+                      </a>
+                      <p>No dudes en ponerse en contacto con nuestro personal de recepción para cualquier consulta.
+                      </p>
+                      <a href="contact-us.html" class="btn btn__secondary btn__link btn__block">
+                        <span>Turnos</span> <i class="icon-arrow-right"></i>
+                      </a>
+                    </div>
+                  </li>-->
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+57772500">Línea telefónica: (+54) 11 5777-2500</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Marcelo T. de Alvear 2259, CABA, Argentina</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Lu-Vi 8:00-19:00</a>
+                  </li>
+                </ul><!-- /.contact__list -->
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                  <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="index.html">
+			<img src="assets/images/logo/logoSVGdark.svg" width="180" class="logo-dark"/>				
+			<img src="assets/images/logo/logoSVGlight.svg" width="180" class="logo-light" />				
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item has-dropdown">
+                <a href="index.html" data-toggle="dropdown" class="dropdown-toggle nav__item-link active">Home</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="index.html#obrassociales" class="nav__item-link">Obras Sociales</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="index.html#tratamientos" class="nav__item-link">Tratamientos Destacados</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="index.html#Testimonios" class="nav__item-link">Testimonios</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="index.html#familias" class="nav__item-link">Familias Diversas</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="home-pharmacy.html" class="nav__item-link">Actividades</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item has-dropdown">
+                <a href="about-us.html" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Sobre IFER</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="about-us.html" class="nav__item-link">Historia</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="about-us.html#ciencia" class="nav__item-link">Ciencia e Investigación</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="about-us.html#sede" class="nav__item-link">Sede Académica (UBA)</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="about-us.html#tecno-labo" class="nav__item-link">Técnología y laboratorio</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item has-dropdown">
+                <a href="doctors-grid.html" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Equipo Médico</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="doctors-grid.html" class="nav__item-link">Staff</a>
+                  </li> <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item has-dropdown">
+                <a href="tratamientos.html#reproduccion" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Tratamientos</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="tratamientos.html" class="nav__item-link">Reproducción Asistida</a>
+					                <ul class="dropdown-submenu list-unstyled">
+                  					<li class="nav__item">
+                   					<a href="tratamientos.html" class="nav__item-link">Inseminación artificial</a>
+                 					</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">FIV</a>
+								  	</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">Ovodonación</a>
+								  	</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">Preservación</a>
+								  	</li><!-- /.nav-item -->
+                					</ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+					<li class="nav__item">
+                    <a href="otrasTecnicas.html" class="nav__item-link">Otras Técnicas</a>
+						 <ul class="dropdown-submenu list-unstyled">
+                  					<li class="nav__item">
+                   					<a href="tratamientos.html" class="nav__item-link">Vitrificación</a>
+                 					</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">ICSI</a>
+								  	</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">Método ROPA</a>
+								  	</li><!-- /.nav-item -->
+									<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">Magenta</a>
+								  	</li><!-- /.nav-item -->
+							 		<li class="nav__item">
+									<a href="otrasTecnicas.html" class="nav__item-link">DuoStim</a>
+								  	</li><!-- /.nav-item -->
+                					</ul><!-- /.dropdown-menu -->
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item has-dropdown">
+                <a href="experiencia.html#proceso" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Experiencia IFER</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="experiencia.html#proceso" class="nav__item-link">Proceso</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="experiencia.html#primera" class="nav__item-link">Primera Consulta</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="experiencia.html#familias" class="nav__item-link">Familias Diversas</a>
+                  </li><!-- /.nav-item -->
+					<li class="nav__item">
+                    <a href="experiencia.html#emocional" class="nav__item-link">Acompañamiento</a>
+                  </li><!-- /.nav-item -->
+					<li class="nav__item">
+                    <a href="experiencia.html#faqs" class="nav__item-link">Preguntas Frecuentes</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+				<li class="nav__item has-dropdown">
+                <a href="docencia.html#cursos" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Docencia</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="docencia.html#cursos" class="nav__item-link">Cursos</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="docencia.html#pasantias" class="nav__item-link">Pasantías</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="docencia.html#charlas" class="nav__item-link">Charlas</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="contact-us.html" class="nav__item-link">Contacto</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button><br>
+	         </div><!-- /.navbar-collapse -->
+		    <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="https://ifer.com.ar/turnos/" class="btn btn__primary btn__rounded ml-30">
+              <i class="icon-calendar"></i>
+              <span>Turnos</span>
+            </a>
+          </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+<!-- /.Header -->
+∫<!-- /.Header -->
+
+    <!-- ========================
+       page title 
+    =========================== -->
+	<section class="page-title">
+      <div class="bg-img"><img src="assets/images/page-titles/3.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-9 col-xl-5">
+            <h1 class="pagetitle__heading">Tratamientos</h1>
+          </div><!-- /.col-xl-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
+	  
+	  
+    <section id="content" class=" pb-80">
+      <div class="container">
+        <div class="row">
+			   <div class="col-sm-12 col-md-12 col-lg-12" id="reproduccion">
+                <h2 class="contact__title pb-20">Reproducción Asistida</h2>
+                <!--<p class="contact__desc">Please feel free to contact our friendly reception staff with any general or
+                  medical enquiry.</p>-->
+               </div> 
+			
+<!-- ========================
+Reproduccion
+=========================== -->
+          <div class="col-sm-12 col-md-12 col-lg-8" id="reproduccion">
+			  <div class="text-block mb-50">
+              <h3 class="text-block__title text-secondary">01.| Baja Complejidad</h3>
+            </div><!-- /.text-block -->
+            <div id="accordion" class="mb-70 pl-40">
+              <div class="accordion-item ">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                  <a class="accordion__title" href="#">| ESTIMULACIÓN OVÁRICA</a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse3" class="collapse show" data-parent="#accordion">
+                  <div class="accordion__body">
+                    <p></p>
+					<p>Consiste en administrar medicación por vía oral o inyectable para estimular la ovulación. De esta manera se logra mejorar la calidad de los óvulos y se pueden programar las relaciones sexuales a los fines de que el óvulo y el espermatozoide logren la fecundación en el aparato reproductor femenino.</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+              <div class="accordion-item">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse1">
+                  <a class="accordion__title" href="#"><strong>| INSEMINACIÓN INTRAUTERINA</strong></a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse1" class="collapse" data-parent="#accordion">
+                  <div class="accordion__body">
+					 <p>Consiste en administrar medicación por vía oral o inyectable para estimular la ovulación. De esta manera se logra mejorar la calidad de los óvulos y se pueden programar las relaciones sexuales a los fines de que el óvulo y el espermatozoide logren la fecundación en el aparato reproductor femenino.</p>
+					 <p><strong>¿En qué casos está indicada?</strong></p>
+					 <ul class="list-unstyled pl-15">
+						 <li>.| Infertilidad de causa desconocida: Cuando no se identifica una patología clara tras las pruebas iniciales.</li>
+						 <li>.| Factor masculino leve o moderado Problemas leves en la concentración, movilidad o morfología de los espermatozoides.</li>
+						 <li>.| Factor cervical: Dificultades en el cuello uterino </li>
+						 <li>.| Problemas en la eyaculación: Como eyaculación retrógrada o disfunción eréctil.</li>
+						 <li>.| Uso de semen de donante (IAD): En mujeres solas, parejas de mujeres o parejas heterosexuales con infertilidad masculina severa.</li>
+					  </ul>
+                    <p><strong>¿Cómo es el proceso paso a paso?</strong></p>
+					   <ul class="list-unstyled pl-15">
+						 <li>.| Estimulación ovárica leve: Aunque se puede realizar en un ciclo natural, suele administrarse una dosis baja de hormonas para favorecer el desarrollo de uno o dos folículos y controlar con precisión el momento exacto de la ovulación.</li>
+						 <li>.| Control ecográfico: Se realizan ecografías periódicas para vigilar el crecimiento de los folículos. Cuando alcanzan el tamaño adecuado, se induce la ovulación mediante una inyección.</li>
+						 <li>.| Capacitación del semen: El mismo día de la inseminación, la pareja aporta la muestra. En el laboratorio se procesa para descartar espermatozoides inmóviles o de mala calidad y concentrar los más rápidos y sanos.</li>
+						 <li>.| Inseminación:  En consultorio se introduce una cánula fina y flexible a través del cuello uterino para depositar la muestra en el fondo del útero. Es un proceso rápido (dura apenas unos minutos), indoloro y no requiere anestesia ni reposo prolongado.</li>
+						 <li>.| Prueba de embarazo: Transcurridos unos 12 a 14 días, se realiza un análisis de sangre.</li>
+					  </ul>
+					  <p><strong>Tasa de éxito</strong></p>
+					  <p>La probabilidad de embarazo por ciclo suele oscilar entre el 15% y el 20%, dependiendo principalmente de la edad de la mujer y de la calidad del semen. Habitualmente se recomiendan hasta 3 o 4 intentos antes de considerar dar el salto a una técnica de alta complejidad como la Fecundación In Vitro (FIV).</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+            </div><!-- /#accordion -->
+			  
+<!--Baja -->
+			  
+			<div class="text-block mb-50" id="preservacion">
+              <h3 class="text-block__title text-secondary">02. | Fertilización</h3>
+            </div><!-- /.text-block -->
+            <div id="accordion" class="mb-70 pl-40">
+              <div class="accordion-item">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                  <a class="accordion__title" href="#"><strong>| ¿QUÉ ES LA FERTILIZACIÓN IN VITRO?</strong></a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse3" class="collapse show" data-parent="#accordion">
+                  <div class="accordion__body">
+					  <p>Literalmente significa “fertilización en un vidrio”.</p>
+					  <p>La fecundación in vitro (FIV) es una de las técnicas de reproducción asistida de alta complejidad más utilizadas. Consiste en unir un óvulo y un espermatozoide fuera del cuerpo de la mujer, en las instalaciones de un laboratorio especializado, para lograr que se fertilice y se forme un embrión.</p>
+					  <p>Posteriormente, este embrión se transfiere al útero materno para que continúe su desarrollo y se logre el embarazo.</p>
+					  <p><strong>¿En qué casos se recomienda?</strong></p>
+					   <ul class="list-unstyled pl-15">
+						 <li>.| Problemas en las trompas de Falopio: Obstrucción, daño o ausencia de las mismas.</li>
+						 <li>.| Infertilidad masculina: Alteraciones moderadas o severas en la calidad, recuento o movilidad de los espermatozoides.</li>
+						 <li>.| Fallo previo de otros tratamientos: Cuando la inseminación artificial no ha funcionado después de varios intentos.</li>
+						 <li>.| Edades maternas avanzadas: Cuando la reserva o calidad de los óvulos disminuye.</li>
+						 <li>.| Diagnóstico Genético Preimplantacional (DGP): Casos en los que se analiza genéticamente el embrión para evitar enfermedades hereditarias graves.</li>
+					  </ul>
+					  <p><strong>¿Cómo es el proceso paso a paso?</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Estimulación ovárica: Durante unos 10 a 12 días, la paciente recibe medicación hormonal para estimular los ovarios y lograr la maduración de múltiples óvulos en lugar de uno solo (como ocurre en un ciclo natural).</li>
+						 <li>.| Punción folicular: Mediante un procedimiento ambulatorio sencillo bajo sedación ligera (de unos 15 minutos), el ginecólogo extrae los óvulos maduros de los ovarios mediante aspiración por ecografía transvaginal.</li>
+						 <li class="pl-15"><strong>.| Fecundación en el laboratorio:</strong>
+									<li>.| <strong>FIV convencional:</strong> Se colocan los óvulos en un plato de cultivo junto con los espermatozoides previamente capacitados para que uno los fecunde espontáneamente.</li>
+									<li>.| <strong>ICSI (Inyección Intracitoplasmática):</strong> Se selecciona el mejor espermatozoide y se introduce directamente dentro de cada óvulo maduro (muy común si hay factor masculino grave).</li>
+						 </li>
+					  	<li>Cultivo embrionario: Los embriones formados se mantienen en incubadoras especiales bajo observación continua durante 3 a 6 días hasta alcanzar la etapa de blastocisto.</li>
+					  	<li>Transferencia embrionaria: Se selecciona el embrión de mejor calidad y se introduce en el útero mediante una cánula muy fina a través del cuello uterino. Es un proceso rápido y sin dolor que no requiere sedación.</li>
+					  	<li>Congelación (Vitrificación): Los embriones restantes de buena calidad que no se transfieren se congelan para futuros intentos o para buscar un segundo hermano.</li>
+					  </ul>
+					<p><strong>Tasa de éxito</strong></p>
+					<p>Las tasas de éxito varían notablemente según la edad de la mujer y las causas de la infertilidad. En mujeres menores de 35 años, la probabilidad de embarazo por ciclo se sitúa generalmente entre el 40% y el 50%, ajustándose gradualmente a menor porcentaje a medida que aumenta la edad materna.</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+            </div><!-- /#accordion -->	
+			  
+<!--Fertilización-->
+			  
+			<div class="text-block mb-50" id="otras">
+              <h3 class="text-block__title text-secondary">03. | Ovodonación</h3>
+            </div><!-- /.text-block -->
+            <div id="accordion" class="mb-70 pl-40">
+              <div class="accordion-item ">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                  <a class="accordion__title" href="#">A. | Ovodonación</a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse3" class="collapse show" data-parent="#accordion">
+                  <div class="accordion__body">
+                    <p>La ovodonación es un tratamiento de reproducción asistida en el cual una mujer recibe los óvulos de una donante para poder lograr un embarazo mediante Fecundación In Vitro (FIV).</p>
+					  <p>¿En qué casos está indicada?</p>
+					  <p>Suele ser la opción indicada cuando los óvulos propios no permiten llevar a cabo un embarazo con éxito. </p>
+					  <p><strong>Esto puede suceder por:</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Baja reserva ovárica o insuficiencia ovárica primaria.</li>
+						 <li>.| Reserva ovárica disminuida por edad (ya que la calidad de los óvulos disminuye naturalmente con los años).</li>
+						 <li>.| Alteraciones genéticas o hereditarias transmisible.</li>
+						 <li>.| Fallos repetidos en tratamientos previos de fertilización asistida.</li>
+					  </ul>
+					  <p><strong>Pasos principales del proceso</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Selección de la donante: Las donantes son evaluadas rigurosamente en cuanto a su salud física, genética y psicológica. Generalmente se buscan donantes con características físicas (fenotipo) compatibles con la mujer receptora.</li>
+						 <li>.| Estimulación ovárica y extracción: La donante recibe tratamiento hormonal para producir varios óvulos, los cuales se extraen mediante una punción folicular.</li>
+						 <li>.| Fecundación en laboratorio: Los óvulos extraídos se fertilizan con el semen de la pareja o de un donante.</li>
+						 <li>.| Preparación endometrial y transferencia: La mujer receptora toma medicación (estrógenos y progesterona) para acondicionar la capa interna del útero (endometrio). Posteriormente, el embrión seleccionado se transfiere al útero para buscar la implantación.</li>
+					  </ul>
+					  <p>Las tasas de éxito suelen ser elevadas por tratarse de óvulos que provienen de donantes jóvenes y sanas.</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+            </div><!-- /#accordion -->	
+			  
+			  
+<!--Ovodonación-->
+			  
+			<div class="text-block mb-50" id="otras">
+              <h3 class="text-block__title text-secondary">04. | Inseminación con Donante</h3>
+            </div><!-- /.text-block -->
+            <div id="accordion" class="mb-70 pl-40">
+              <div class="accordion-item ">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                  <a class="accordion__title" href="#">A. | Inseminación</a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse3" class="collapse show" data-parent="#accordion">
+                  <div class="accordion__body">
+                    <p>La inseminación artificial con semen de donante (IAD) es un tratamiento de reproducción asistida sencillo y poco invasivo que consiste en introducir una muestra de espermatozoides procedentes de un banco de semen directamente en el interior del útero de la mujer.</p>
+					<p>Este procedimiento se sincroniza con el momento exacto de la ovulación para facilitar que los espermatozoides fecunden el óvulo de forma natural.</p>
+					<p><strong>¿En qué casos está indicada?</strong></p>
+					   <ul class="list-unstyled pl-15">
+						 <li>.| Mujeres sin pareja masculina: Aquellas que buscan la maternidad de forma individual.   </li>
+						 <li>.| Parejas de mujeres: Parejas compuestas por dos mujeres que desean lograr un embarazo. </li>
+						 <li>.| Infertilidad masculina severa: Casos en los que el varón presenta falta de espermatozoides (azoospermia) o alteración grave en la calidad seminal.</li>
+						 <li>.| Riesgo de transmisión genética: Cuando el hombre transmite alguna enfermedad hereditaria grave que no puede descartarse mediante otros métodos.</li>
+					  </ul>
+					 <p><strong>¿Cómo es el proceso paso a paso?</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Selección del donante: Se eligen las muestras procedentes de un banco de semen con base en la compatibilidad de grupo sanguíneo y características físicas (fenotipo) de la mujer o la pareja. Los donantes pasan por controles médicos, genéticos e infecciosos exhaustivos. </li>
+						 <li>.| Estimulación y monitoreo de la ovulación: Se realiza un seguimiento por ecografía para controlar el crecimiento folicular y programar el día óptimo para el procedimiento. En algunos casos se administran pequeñas dosis de hormonas para estimular la maduración de los óvulos. </li>
+						 <li>.| Capacitación del semen: El laboratorio descongela la muestra y selecciona los espermatozoides con mejor movilidad.</li>
+						 <li>.| Inseminación: En el consultorio, con una pequeña cánula flexible se deposita la muestra concentrada de espermatozoides dentro del útero. Es un proceso ambulatorio, rápido y sin dolor que no requiere anestesia.   </li>
+					  </ul>
+					  <p>Prueba de embarazo: Transcurridas unas dos semanas de la inseminación, se realiza un análisis de sangre o test de orina para confirmar la gestación.</p>
+					  <p><strong>Tasa de éxito</strong></p>
+					  <p>La probabilidad de embarazo por ciclo oscila generalmente entre el 15% y el 25%, aumentando en ciclos acumulativos. La edad de la mujer y su reserva ovárica son los factores más determinantes en el éxito de la técnica. Las inseminaciones pueden ser realizadas en un ciclo espontáneo (utilizando algún método para sincronizarlas con la ovulación) o en un ciclo de estímulo ovulatorio con medicamentos que promueven la fertilidad. Esta decisión dependerá de la presencia o no de una ovulación normal y de la edad y características ginecológicas/reproductivas de la mujer. Los porcentajes de éxito de las inseminaciones de este tipo rondan el 15% por intento, por lo que puede ser necesario realizar varias inseminaciones para lograr el embarazo. Teniendo en cuenta este porcentaje de éxito, podríamos esperar que la mayoría de las pacientes se embaracen dentro de los primeros 9 meses. Los motivos más importantes de fracaso entre las pacientes que participan en un programa de inseminación con semen de donante incluyen el abandono y problemas de infertilidad de las mismas.</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+            </div><!-- /#accordion -->
+			  
+			  
+<!--Inseminación-->
+			  
+		<div class="text-block mb-50" id="otras">
+              <h3 class="text-block__title text-secondary">05. | Vitrificación de Óvulos</h3>
+            </div><!-- /.text-block -->
+            <div id="accordion" class="mb-70 pl-40">
+              <div class="accordion-item ">
+                <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                  <a class="accordion__title" href="#">A. | Vitrificación</a>
+                </div><!-- /.accordion-item-header -->
+                <div id="collapse3" class="collapse show" data-parent="#accordion">
+                  <div class="accordion__body">
+                    <p>La vitrificación de óvulos es un método de preservación de la fertilidad que consiste en congelar los óvulos mediante un enfriamiento ultra rápido a muy bajas temperaturas para conservar sus propiedades intactas durante el tiempo que sea necesario.</p>
+					  <p><strong>¿Para quién está recomendada?</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Preservación por motivos sociales o personales: Mujeres que desean posponer la maternidad para el futuro manteniendo la calidad biológica de sus óvulos jóvenes.</li>
+						 <li>.| Razones médicas: Pacientes que van a someterse a tratamientos contra el cáncer (como quimioterapia o radioterapia) u otras intervenciones médicas/quirúrgicas que puedan comprometer su fertilidad.</li>
+						 <li>.| Enfermedades ginecológicas: Casos de endometriosis severa, baja reserva ovárica, quistes de ovario.</li>
+						 <li>.| Enfermedades crónicas, tratamientos con medicaciones/drogas, que requieren diferir la maternidad: Lupus (LES), Artritis reumatoidea (AR). </li>
+						 <li>.| Tratamientos de fecundación in vitro (FIV): Para acumular óvulos en mujeres con baja respuesta o cuando no es posible realizar la transferencia en el ciclo actual.</li>
+					  </ul>
+					  <p><strong>¿Cómo es el proceso paso a paso?</strong></p>
+					  <ul class="list-unstyled pl-15">
+						 <li>.| Estimulación ovárica: Durante 10 a 12 días aproximadamente, la mujer administra medicación hormonal para estimular la maduración simultánea de varios folículos en los ovarios.</li>
+						 <li>.| Monitoreo: Se realizan controles ecográficos y de sangre para evaluar la evolución y crecimiento folicular.</li>
+						 <li>.| Punción folicular: Es un procedimiento quirúrgico menor y ambulatorio que dura entre 15 y 20 minutos. Se realiza bajo sedación suave y consiste en extraer el líquido folicular que contiene los óvulos maduros.</li>
+						 <li>.| Vitrificación en laboratorio: Los óvulos maduros recuperados se deshidratan con sustancias crioprotectoras y se sumergen rápidamente en nitrógeno líquido.</li>
+						 <li>.| Almacenamiento: Los óvulos quedan almacenados en los bancos de nitrógeno sin límite de tiempo y sin perder sus propiedades ni su calidad.</li>
+					  </ul>
+					  <p><strong>Aspectos clave</strong></p>
+					  <p>La edad importa: La calidad y la cantidad de los óvulos disminuyen sensiblemente con los años. Por eso, la edad ideal para realizar este procedimiento suele ser antes de los 35 años.</p>
+					  <p>Uso futuro: Cuando se decide buscar el embarazo, los óvulos se descongelan y se fecundan en el laboratorio mediante la técnica de Fecundación In Vitro (FIV) o ICSI (inyección intracitoplasmática) con semen de la pareja o de un donante.</p>
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div><!-- /.accordion-item -->
+            </div><!-- /#accordion -->
+		
+          </div><!-- /.col-lg-8 -->
+			
+<!--Vitrificación-->
+			
+<!-- ========================
+Aside
+========================== -->
+
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <aside class="sidebar has-marign-left sticky-top">
+              <div class="widget widget-services">
+                <h5 class="widget__title">Servicios</h5>
+                <div class="widget-content">
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="doctors-grid.html"><span>Equipo Profesional</span><i class="icon-arrow-right"></i></a></li>
+                    <li><a href="https://ifer.com.ar/turnos/"><span>Elegir Turno</span><i class="icon-arrow-right"></i></a></li>
+                  </ul>
+                </div><!-- /.widget-content -->
+              </div><!-- /.widget-services -->
+				
+				
+              <!--<div class="widget widget-help bg-overlay bg-overlay-secondary-gradient">
+                <div class="bg-img"><img src="assets/images/banners/5.jpg" alt="background"></div>
+                <div class="widget-content">
+                  <div class="widget__icon">
+                    <i class="icon-call3"></i>
+                  </div>
+                  <h4 class="widget__title">Emergency Cases</h4>
+                  <p class="widget__desc">Please feel welcome to contact our friendly reception staff with any general
+                    or medical enquiry call us.
+                  </p>
+                  <a href="tel:+201061245741" class="phone__number">
+                    <i class="icon-phone"></i> <span>01061245741</span>
+                  </a>
+                </div>
+              </div>-->
+				<!--<div class="widget widget-schedule">
+                <div class="widget-content">
+                  <div class="widget__icon">
+                    <i class="icon-charity2"></i>
+                  </div>
+                  <h4 class="widget__title">Opening Hours</h4>
+                  <ul class="time__list list-unstyled mb-0">
+                    <li><span>Monday - Friday</span><span>8.00 - 7:00 pm</span></li>
+                    <li><span>Saturday</span><span>9.00 - 10:00 pm</span></li>
+                    <li><span>Sunday</span><span>10.00 - 12:00 pm</span></li>
+                  </ul>
+                </div>
+              </div>-->
+        	<!--<div class="widget widget-reports">
+                <a href="#" class="btn btn__primary btn__block">
+                  <i class="icon-pdf-file"></i>
+                  <span>2025 </span>
+                </a>
+              </div>-->
+				
+            </aside><!-- /.sidebar -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+	
+	
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <div class="footer-widget-about">
+                <img src="assets/images/logo/logoSVGlight.svg" width="200" alt="logo"  class="mb-30">
+                <p class="color-gray">Detrás de cada historia hay un equipo que combina ciencia, vocación y empatía. Celebramos cuatro décadas de compromiso, investigación y sueños cumplidos.</p>
+                <a href="https://ifer.com.ar/turnos/" class="btn btn__primary btn__primary-style2 btn__link">
+                  <span>Agendá tu Turno</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Departamentos</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="tratamientos.html">Reproducción Asistida</a></li>
+                    <li><a href="tratamientos.html">Preservación fertilidad</a></li>
+                    <li><a href="tratamientos.html">Otros Tratamientos</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="about-us.html">Sobre Nosotros</a></li>
+                    <li><a href="tratamientos.html">Tratamientos</a></li>
+                    <li><a href="docencia.html">Docencia</a></li>
+                    <li><a href="doctors-grid.html">Equipo Profesional</a></li>
+                    <li><a href="https://ifer.com.ar/turnos/">Turnos</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget__title color-heading">Contacto Rápido</h6>
+                <ul class="contact-list list-unstyled">
+                  <li>
+                    <a href="#" class="phone__number">
+                      <i class="icon-phone"></i> <span>(+54) 11 5777-2500</span>
+                    </a>
+                  </li>
+                  <li class="color-body">Marcelo T. de Alvear 2259, CABA, Argentina</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <a href="contact-us.html" class="btn btn__primary btn__link mr-30">
+                    <i class="icon-arrow-right"></i> <span>Ubicación</span>
+                  </a>
+                  <ul class="social-icons list-unstyled mb-0">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                </div>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <span class="fz-14">&copy; 2026, All Rights Reserved.</span>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <nav>
+                <ul class="list-unstyled footer__copyright-links d-flex flex-wrap justify-content-end mb-0">
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Cookies</a></li>
+                </ul>
+              </nav>
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

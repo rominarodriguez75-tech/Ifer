@@ -12,6 +12,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->exec('CREATE TABLE IF NOT EXISTS appointments (id INTEGER PRIMARY KEY AUTOINCREMENT, doctor TEXT NOT NULL, appointment_date TEXT NOT NULL, appointment_time TEXT NOT NULL, patient_name TEXT NOT NULL, patient_email TEXT NOT NULL, patient_phone TEXT NOT NULL, token TEXT NOT NULL UNIQUE, status TEXT NOT NULL DEFAULT "pending", google_event_id TEXT, created_at TEXT NOT NULL)');
 $columns = $db->query('PRAGMA table_info(appointments)')->fetchAll(PDO::FETCH_COLUMN, 1);
 if (!in_array('google_event_id', $columns, true)) $db->exec('ALTER TABLE appointments ADD COLUMN google_event_id TEXT');
+$db->exec('CREATE UNIQUE INDEX IF NOT EXISTS appointments_active_slot ON appointments (doctor, appointment_date, appointment_time) WHERE status <> "cancelled"');
 $db->exec('CREATE TABLE IF NOT EXISTS specialties (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL UNIQUE, active INTEGER NOT NULL DEFAULT 1)');
 $db->exec('CREATE TABLE IF NOT EXISTS doctors (id TEXT PRIMARY KEY, name TEXT NOT NULL, active INTEGER NOT NULL DEFAULT 1)');
 $db->exec('CREATE TABLE IF NOT EXISTS doctor_specialties (doctor_id TEXT NOT NULL, specialty_id INTEGER NOT NULL, PRIMARY KEY (doctor_id, specialty_id))');
@@ -89,24 +90,29 @@ if ($action === 'book' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         if ((int) $error->errorInfo[1] === 19) response(false, 'Ese horario acaba de ser reservado. Elegí otro.');
         response(false, 'No se pudo guardar el turno.');
     }
-    $appointment = ['appointment_date' => $date, 'appointment_time' => $time, 'patient_name' => $name, 'patient_email' => $email, 'patient_phone' => $phone, 'status' => 'pending'];
-    $eventId = $calendar->createAppointment($appointment, $doctorName);
-    if ($eventId) {
-        $update = $db->prepare('UPDATE appointments SET google_event_id = ? WHERE token = ?');
-        $update->execute([$eventId, $token]);
-    }
-    response(true, 'Recibimos tu solicitud. Te enviaremos la confirmación al celular.', ['token' => $token, 'calendar_synced' => (bool) $eventId]);
+    response(true, 'Recibimos tu solicitud. Te enviaremos la confirmación al celular.', ['token' => $token, 'calendar_synced' => false]);
 }
 
 if (($action === 'confirm' || $action === 'cancel') && isset($_GET['token'])) {
     $status = $action === 'confirm' ? 'confirmed' : 'cancelled';
-    $query = $db->prepare('SELECT id, google_event_id FROM appointments WHERE token = ? AND status <> "cancelled"');
+    $query = $db->prepare('SELECT id, doctor, appointment_date, appointment_time, patient_name, patient_email, patient_phone, google_event_id, status FROM appointments WHERE token = ?');
     $query->execute([$_GET['token']]);
     $appointment = $query->fetch(PDO::FETCH_ASSOC);
-    if (!$appointment) response(false, 'El enlace no es válido o el turno ya fue cancelado.');
-    $query = $db->prepare('UPDATE appointments SET status = ? WHERE id = ?');
-    $query->execute([$status, $appointment['id']]);
-    $calendar->updateAppointment($appointment['google_event_id'], $status);
+    if (!$appointment || $appointment['status'] === 'cancelled') response(false, 'El enlace no es válido o el turno ya fue cancelado.');
+    if ($appointment['status'] === $status) response(true, $status === 'confirmed' ? 'Turno ya confirmado.' : 'Turno ya cancelado.');
+    if ($status === 'confirmed') {
+        $doctorQuery = $db->prepare('SELECT name FROM doctors WHERE id = ?');
+        $doctorQuery->execute([$appointment['doctor']]);
+        $doctorName = $doctorQuery->fetchColumn();
+        $eventId = $calendar->createAppointment(array_merge($appointment, ['status' => 'confirmed']), $doctorName ?: $appointment['doctor']);
+        if (!$eventId) response(false, 'No se pudo sincronizar el turno con Google Calendar. Intentá nuevamente.');
+        $query = $db->prepare('UPDATE appointments SET status = ?, google_event_id = ? WHERE id = ? AND status = "pending"');
+        $query->execute([$status, $eventId, $appointment['id']]);
+    } else {
+        $query = $db->prepare('UPDATE appointments SET status = ? WHERE id = ? AND status = "pending"');
+        $query->execute([$status, $appointment['id']]);
+        $calendar->updateAppointment($appointment['google_event_id'], $status);
+    }
     response(true, $status === 'confirmed' ? 'Turno confirmado.' : 'Turno cancelado.');
 }
 response(false, 'Acción no válida.');
